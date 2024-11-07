@@ -10,7 +10,8 @@ import Testing
 
 struct SearchingTest {
 
-    @Test func binarySearch() async throws {
+    @Test("Testing Parameterised binary search", arguments: zip([[1,2,3,4,5]]))
+    func binarySearchWithVariousItems(array: [Int], itemToFind: Int) async throws {
         //arrange
         let searching = Searching()
         //act

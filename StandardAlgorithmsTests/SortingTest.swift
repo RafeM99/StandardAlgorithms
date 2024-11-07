@@ -10,7 +10,7 @@ import Testing
 
 struct SortingTest {
 
-    @Test func bubbleSort() async throws {
+    @Test func testingBubbleSortBasics() async throws {
         //arrange
         let sorting = Sorting()
         var shuffledArray = [4,2,8,9,5]

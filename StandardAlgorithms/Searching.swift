@@ -8,5 +8,7 @@
 import Foundation
 
 class Searching {
-    
+    func binarySearch() {
+        
+    }
 }

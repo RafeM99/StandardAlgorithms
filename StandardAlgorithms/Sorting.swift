@@ -8,8 +8,15 @@
 import Foundation
 
 class Sorting {
-    func bubbleSort(_ shuffledArray: [Int]) -> [Int] {
-        for
+    func bubbleSort(_ array: [Int]) -> [Int] {
+//        for i in 0 ..< array.count {
+//            if array[i] > array[i+1] {
+//                array[i] = array[i+1]
+//                array[i+1] = array[i]
+//            }
+//            
+//            return array
+        
         return [0]
     }
 }

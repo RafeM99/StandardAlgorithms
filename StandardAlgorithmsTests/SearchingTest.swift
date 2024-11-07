@@ -6,12 +6,15 @@
 //
 
 import Testing
+@testable import StandardAlgorithms
 
-struct Searching {
+struct SearchingTest {
 
     @Test func binarySearch() async throws {
         //arrange
+        let searching = Searching()
         //act
+        let result = searching.binarySearch()
         //assert
     }
 

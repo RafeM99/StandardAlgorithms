@@ -39,7 +39,7 @@ class Sorting {
                     largerArray.append(array[i])
                 }
                     
-                array = quickSort(smallerArray)ç
+                return quickSort(smallerArray) + pivot + quickSort(largerArray)
         }
             
       

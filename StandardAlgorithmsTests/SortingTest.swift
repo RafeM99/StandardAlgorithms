@@ -29,5 +29,15 @@ struct SortingTest {
         //assert
         #expect(result == expected)
     }
+    
+    @Test("Testing Parameterised quick sort", arguments: zip([[4,2,8,9,5],[8,2,7,10,0]],[[2,4,5,8,9],[0,2,7,8,10]]))
+    func quickSortWithVariousArrays(numbersToSort: [Int], expected: [Int]) async throws {
+        //arrange
+        let sorting = Sorting()
+        //act
+        let result = sorting.quickSort(numbersToSort)
+        //assert
+        #expect(result == expected)
+    }
 
 }

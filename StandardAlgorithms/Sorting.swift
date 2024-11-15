@@ -21,7 +21,7 @@ class Sorting {
     }
     
     func quickSort(_ arrayToSort: [Int]) -> [Int] {
-        var array = arrayToSort
+        let array = arrayToSort
         
         if array.count <= 1 {
             return array

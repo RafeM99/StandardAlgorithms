@@ -8,17 +8,24 @@
 import Foundation
 
 class Sorting {
-    func bubbleSort(_ array: [Int]) -> [Int] {
-//        for i in 0 ..< array.count {
-//            if array[i] > array[i+1] {
-//                array[i] = array[i+1]
-//                array[i+1] = array[i]
-//            }
-//            
-//            return array
-        
-        return [0]
+    func bubbleSort(_ arrayToSort: [Int]) -> [Int] {
+        var array = arrayToSort
+        var swaps = 1
+        var temp = 0
+        while swaps != 0 {
+            swaps = 0
+            for i in 0 ..< (array.count - 1) {
+                if array[i] > array[i+1] {
+                    temp = array[i]
+                    array[i] = array[i+1]
+                    array[i+1] = temp
+                    swaps += 1
+                }
+            }
+        }
+        return array
     }
+
     
     func quickSort(_ arrayToSort: [Int]) -> [Int] {
         let array = arrayToSort
@@ -92,7 +99,7 @@ class Sorting {
     
     
     func insertionSort(_ array: [Int]) -> [Int] {
-        
+        return [0]
     }
 }
 

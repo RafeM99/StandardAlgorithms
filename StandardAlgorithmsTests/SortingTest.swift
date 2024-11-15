@@ -13,7 +13,7 @@ struct SortingTest {
     @Test func testingBubbleSortBasics() async throws {
         //arrange
         let sorting = Sorting()
-        var shuffledArray = [4,2,8,9,5]
+        let shuffledArray = [4,2,8,9,5]
         //act
         let result = sorting.bubbleSort(shuffledArray)
         //assert

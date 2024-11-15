@@ -99,7 +99,20 @@ class Sorting {
     
     
     func insertionSort(_ array: [Int]) -> [Int] {
-        return [0]
+        var sortedArray = [Int]()
+        
+        for i in 0 ..< array.count {
+            sortedArray.append(array[i])
+            
+            for j in 0 ..< sortedArray.count {
+                if array[i+1] > sortedArray[j] {
+                    sortedArray.append(array[i+1])
+                } else {
+                    sortedArray.insert(array[i+1], at: j-1)
+                }
+            }
+        }
+        return sortedArray
     }
 }
 

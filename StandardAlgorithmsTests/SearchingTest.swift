@@ -10,13 +10,14 @@ import Testing
 
 struct SearchingTest {
 
-    @Test("Testing Parameterised binary search", arguments: zip([[1,2,3,4,5]]))
-    func binarySearchWithVariousItems(array: [Int], itemToFind: Int) async throws {
+    @Test("Testing Parameterised binary search", arguments: [(arrayToSearch: [2,4,5,7,8], itemToFind: 4, expectedIndex: 1), (arrayToSearch: [1,5,6,8,9], itemToFind: 8, expectedIndex: 3)])
+    func binarySearchWithVariousItems(arrayToSearch: [Int], itemToFind: Int, expectedIndex: Int) async throws {
         //arrange
         let searching = Searching()
         //act
-        let result = searching.binarySearch()
+        let result = searching.binarySearch(arrayToSearch, itemToFind)
         //assert
+        #expect(result == expectedIndex)
     }
 
 }

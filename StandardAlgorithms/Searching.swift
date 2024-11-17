@@ -8,7 +8,19 @@
 import Foundation
 
 class Searching {
-    func binarySearch() {
+    func binarySearch(_ array: [Int], _ item: Int) -> Int {
+        var found = false
+        var index = 0
         
+        while found == false {
+            if array[index] == item {
+                found = true
+            }
+        }
+        if found == true {
+            return index
+        } else {
+            return -1
+        }
     }
 }

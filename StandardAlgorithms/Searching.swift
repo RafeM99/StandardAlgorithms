@@ -8,7 +8,7 @@
 import Foundation
 
 class Searching {
-    func binarySearch(_ array: [Int], _ item: Int) -> Int {
+    func linearSearch(_ array: [Int], _ item: Int) -> Int {
         var found = false
         var index = 0
         
@@ -16,10 +16,37 @@ class Searching {
             if array[index] == item {
                 found = true
             }
+            else {
+                index += 1
+            }
         }
         if found == true {
             return index
         } else {
+            return -1
+        }
+    }
+    
+    func binarySearch(_ array: [Int], _ item: Int) -> Int {
+        var found = false
+        var left = 0
+        var right = array.count - 1
+        
+        while left <= right {
+            let mid = (left + right) / 2
+            
+            if array[mid] == item {
+                found = true
+                return mid
+            }
+            else if array[mid] < item  {
+                left = mid + 1
+            }
+            else {
+                right = mid - 1
+            }
+        }
+        if found == false {
             return -1
         }
     }
